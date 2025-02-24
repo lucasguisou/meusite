@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatize seu WhatsApp</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CKZV77QY7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CKZV77QY7');
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,7 +51,8 @@
     <div class="container">
         <h1>Automatize seu WhatsApp!</h1>
         <p>Atenda seus clientes 24h por dia sem esforço. Melhore seu atendimento agora!</p>
-        <a href="https://bit.ly/chatbotwhatsappbr" class="button">Fale Conosco no WhatsApp</a>
+        <a href="https://bit.ly/chatbotwhatsappbr" class="button" onclick="gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Botão WhatsApp'});">Fale Conosco no WhatsApp</a>
     </div>
 </body>
 </html>
+
