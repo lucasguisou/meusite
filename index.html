@@ -24,6 +24,7 @@
             border-radius: 10px;
             box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
             display: inline-block;
+            max-width: 500px;
         }
         h1 {
             color: #333;
@@ -33,26 +34,43 @@
             color: #666;
         }
         .button {
-            display: inline-block;
-            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
             font-size: 20px;
             color: white;
             background-color: #25D366;
             text-decoration: none;
             border-radius: 5px;
             margin-top: 20px;
+            font-weight: bold;
+        }
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
         .button:hover {
             background-color: #1ebe5d;
+        }
+        .testimonial {
+            font-style: italic;
+            color: #444;
+            margin-top: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Automatize seu WhatsApp!</h1>
-        <p>Atenda seus clientes 24h por dia sem esforço. Melhore seu atendimento agora!</p>
-        <a href="https://bit.ly/chatbotwhatsappbr" class="button" onclick="gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Botão WhatsApp'});">Fale Conosco no WhatsApp</a>
+        <p>Quer reduzir seu tempo de resposta no WhatsApp? Nós temos a solução!</p>
+        <p><strong>Mais de 50 empresas já automatizaram seu atendimento!</strong></p>
+        <p class="testimonial">"Meu atendimento ficou 10x mais rápido! Recomendo muito!" - João S.</p>
+        <a href="https://bit.ly/chatbotwhatsappbr" class="button" onclick="gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Botão WhatsApp'});">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Fale Conosco no WhatsApp
+        </a>
+        <p><strong>Vagas limitadas para configuração grátis, aproveite agora!</strong></p>
     </div>
 </body>
 </html>
-
