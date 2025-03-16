@@ -33,44 +33,69 @@
             font-size: 18px;
             color: #666;
         }
+        .form-group {
+            margin: 15px 0;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
         .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             padding: 15px;
             font-size: 20px;
             color: white;
             background-color: #25D366;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            border: none;
         }
         .button:hover {
             background-color: #1ebe5d;
-        }
-        .testimonial {
-            font-style: italic;
-            color: #444;
-            margin-top: 15px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Automatize seu WhatsApp!</h1>
-        <p>Quer reduzir seu tempo de resposta no WhatsApp? Nós temos a solução!</p>
-        <p><strong>Mais de 50 empresas já automatizaram seu atendimento!</strong></p>
-        <p class="testimonial">"Meu atendimento ficou 10x mais rápido! Recomendo muito!" - João S.</p>
-        <a href="https://bit.ly/chatbotwhatsappbr" class="button" onclick="gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'Botão WhatsApp'});">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Fale Conosco no WhatsApp
-        </a>
+        <p>Quer automatizar seu atendimento? Deixe seu contato e fale com um especialista!</p>
+        <form id="leadForm">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
+            </div>
+            <button type="submit" class="button">Receber Contato</button>
+        </form>
         <p><strong>Vagas limitadas para configuração grátis, aproveite agora!</strong></p>
     </div>
+    
+    <script>
+        document.getElementById("leadForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById("name").value;
+            const whatsapp = document.getElementById("whatsapp").value;
+            
+            const scriptURL = "https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec";
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(document.getElementById("leadForm"))
+            })
+            .then(response => {
+                alert("Contato enviado com sucesso! Em breve entraremos em contato.");
+                document.getElementById("leadForm").reset();
+            })
+            .catch(error => console.error('Erro!', error.message));
+        });
+    </script>
 </body>
 </html>
+
