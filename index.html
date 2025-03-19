@@ -3,99 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatize seu WhatsApp</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CKZV77QY7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8CKZV77QY7');
-    </script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
-            display: inline-block;
-            max-width: 500px;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-        }
-        .form-group {
-            margin: 15px 0;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px;
-            font-size: 20px;
-            color: white;
-            background-color: #25D366;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-            border: none;
-        }
-        .button:hover {
-            background-color: #1ebe5d;
-        }
-    </style>
+    <title>Aprenda a Construir seu Marketing Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Automatize seu WhatsApp!</h1>
-        <p>Quer automatizar seu atendimento? Deixe seu contato e fale com um especialista!</p>
-        <form id="leadForm">
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Seu nome" required>
-            </div>
-            <div class="form-group">
-                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Seu WhatsApp" required>
-            </div>
-            <button type="submit" class="button">Receber Contato</button>
+    <header>
+        <h1>Aprenda a Construir seu Marketing Pessoal</h1>
+        <p>Destque-se no trabalho, alcance a ascensão social e aumente suas vendas!</p>
+    </header>
+    <section>
+        <h2>Por que aprender marketing pessoal?</h2>
+        <ul>
+            <li>📈 Aumente suas chances de promoção no trabalho</li>
+            <li>💼 Construa uma imagem profissional forte e influente</li>
+            <li>💰 Melhore suas vendas através de uma presença estratégica</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Inscreva-se para receber mais informações!</h2>
+        <form action="https://script.google.com/macros/s/SEU_SCRIPT_URL/exec" method="post">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="text" id="whatsapp" name="whatsapp" required>
+            
+            <button type="submit">Quero Saber Mais</button>
         </form>
-        <p><strong>Vagas limitadas para configuração grátis, aproveite agora!</strong></p>
-    </div>
-    
-    <script>
-        document.getElementById("leadForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            const name = document.getElementById("name").value;
-            const whatsapp = document.getElementById("whatsapp").value;
-            
-            const scriptURL = "https://script.google.com/macros/s/AKfycbwDPIqBO35_4XgC8u57zQrb7obZoAPFR6_T1Xc6FM1ET19SiXr4jX_pBPZ5v7afkNfd/exec";
-            
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(document.getElementById("leadForm"))
-            })
-            .then(response => {
-                alert("Contato enviado com sucesso! Em breve entraremos em contato.");
-                document.getElementById("leadForm").reset();
-            })
-            .catch(error => console.error('Erro!', error.message));
-        });
-    </script>
+    </section>
+    <footer>
+        <p>&copy; 2025 - Todos os direitos reservados</p>
+    </footer>
 </body>
 </html>
+
 
