@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aprenda a Construir seu Marketing Pessoal</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Marketing Pessoal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Aprenda a Construir seu Marketing Pessoal</h1>
-        <p>Destque-se no trabalho, alcance a ascensão social e aumente suas vendas!</p>
-    </header>
-    <section>
-        <h2>Por que aprender marketing pessoal?</h2>
-        <ul>
-            <li>📈 Aumente suas chances de promoção no trabalho</li>
-            <li>💼 Construa uma imagem profissional forte e influente</li>
-            <li>💰 Melhore suas vendas através de uma presença estratégica</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Inscreva-se para receber mais informações!</h2>
-        <form action="https://script.google.com/macros/s/AKfycbwwba7BoIeUNTpPlWGqdMJJ51rUmU5lw22SaWSUzW8KU63-Xxeguqfnk-A_FIcG3AmW/exec" method="post">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="whatsapp">WhatsApp:</label>
-            <input type="text" id="whatsapp" name="whatsapp" required>
-            
-            <button type="submit">Quero Saber Mais</button>
-        </form>
-    </section>
-    <footer>
-        <p>&copy; 2025 - Todos os direitos reservados</p>
-    </footer>
+<body class="bg-blue-50 text-gray-800">
+  <div class="max-w-4xl mx-auto p-6 flex flex-col items-center">
+    <img src="sua-imagem-aqui.png" alt="Curso de Marketing Pessoal" class="w-full max-w-md mb-6 rounded-2xl shadow-lg" />
+    <h1 class="text-3xl font-bold text-center mb-2">Curso de Marketing Pessoal</h1>
+    <p class="text-center text-lg mb-6">Aprenda a valorizar sua imagem, destacar suas qualidades e abrir novas oportunidades na sua carreira!</p>
+
+    <ul class="mb-6 space-y-2">
+      <li>✅ Aumente sua visibilidade profissional</li>
+      <li>✅ Melhore sua comunicação pessoal</li>
+      <li>✅ Conquiste mais confiança e reconhecimento</li>
+    </ul>
+
+    <form id="leadForm" class="w-full max-w-md space-y-4">
+      <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-3 border border-gray-300 rounded-xl" />
+      <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-3 border border-gray-300 rounded-xl" />
+      <button type="submit" class="w-full bg-orange-500 text-white font-semibold py-3 rounded-xl hover:bg-orange-600 transition">Quero Me Destacar!</button>
+      <p id="statusMsg" class="text-center text-sm text-green-600 mt-2 hidden">Inscrição enviada com sucesso!</p>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const statusMsg = document.getElementById('statusMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      try {
+        const response = await fetch('URL_DO_SEU_WEBHOOK_DO_GOOGLE_APPS_SCRIPT', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          statusMsg.classList.remove('hidden');
+          form.reset();
+        }
+      } catch (err) {
+        alert('Erro ao enviar sua inscrição. Tente novamente.');
+      }
+    });
+  </script>
 </body>
 </html>
 
