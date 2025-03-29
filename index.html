@@ -91,7 +91,7 @@
       const data = Object.fromEntries(formData);
 
       try {
-        const response = await fetch('URL_DO_SEU_WEBHOOK_DO_GOOGLE_APPS_SCRIPT', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbzBGsYPhpTQEDDoPxzGKVeiJqlX7-93dwRpdyr-Rvh-CRW5aqlWM1JEi6Va292ZIBo/exec', {
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
