@@ -6,109 +6,128 @@
   <title>Curso de Marketing Pessoal</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-blue-50 text-gray-800">
-  <div class="max-w-5xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <!-- Imagem lateral -->
-    <div>
-      <img src="https://github.com/lucasguisou/meusite/blob/main/mktpessoal4.png" 
-           alt="Mulher confiante" 
-           class="w-full rounded-2xl shadow-xl" />
+  <!-- CABEÇALHO -->
+  <header class="bg-blue-900 text-white text-center py-12 px-4">
+    <h1 class="text-4xl font-bold mb-2">Curso de Marketing Pessoal</h1>
+    <p class="text-lg">Destaque sua imagem e avance na carreira</p>
+  </header>
+
+  <!-- BENEFÍCIOS -->
+  <section class="py-12 px-4 max-w-5xl mx-auto text-center">
+    <h2 class="text-2xl font-semibold mb-6">O que você vai aprender:</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <div class="text-4xl mb-2">💡</div>
+        <p>Construir sua marca pessoal</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-2">🗣️</div>
+        <p>Se comunicar com autoridade</p>
+      </div>
+      <div>
+        <div class="text-4xl mb-2">🚀</div>
+        <p>Gerar oportunidades reais</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Conteúdo principal -->
-    <div class="flex flex-col items-center md:items-start">
-      <img src="sua-imagem-aqui.png" alt="Curso de Marketing Pessoal" class="w-full max-w-sm mb-6 rounded-2xl shadow-lg hidden md:block" />
+  <!-- FORMULÁRIO -->
+  <section class="bg-white py-12 px-4">
+    <h2 class="text-2xl text-center font-bold mb-6">Inscreva-se para saber mais</h2>
+    <form id="form" class="max-w-xl mx-auto grid gap-4">
+      <input type="text" name="nome" placeholder="Seu nome" required class="border p-3 rounded">
+      <input type="email" name="email" placeholder="Seu e-mail" required class="border p-3 rounded">
+      <button type="submit" class="bg-blue-900 text-white p-3 rounded hover:bg-blue-800">
+        Quero Me Destacar!
+      </button>
+    </form>
+    <p id="success" class="text-green-600 text-center mt-4 hidden">Inscrição realizada com sucesso!</p>
+  </section>
 
-      <h1 class="text-3xl font-bold text-center md:text-left mb-2">Curso de Marketing Pessoal</h1>
-      <p class="text-center md:text-left text-lg mb-6">Aprenda a valorizar sua imagem, destacar suas qualidades e abrir novas oportunidades na sua carreira!</p>
-
-      <ul class="mb-6 space-y-2 text-sm md:text-base">
-        <li>✨ Aumente sua visibilidade profissional</li>
-        <li>🗣️ Melhore sua comunicação pessoal</li>
-        <li>🚀 Conquiste mais confiança e reconhecimento</li>
-      </ul>
-
-      <form id="leadForm" class="w-full max-w-md space-y-4">
-        <input type="text" name="nome" placeholder="Seu nome" required class="w-full p-3 border border-gray-300 rounded-xl" />
-        <input type="email" name="email" placeholder="Seu e-mail" required class="w-full p-3 border border-gray-300 rounded-xl" />
-        <button type="submit" class="w-full bg-orange-500 text-white font-semibold py-3 rounded-xl hover:bg-orange-600 transition">Quero Me Destacar!</button>
-        <p id="statusMsg" class="text-center text-sm text-green-600 mt-2 hidden">Inscrição enviada com sucesso!</p>
-      </form>
-    </div>
-  </div>
-
-  <!-- Depoimentos -->
-  <section class="bg-white py-10">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-6">O que nossos alunos dizem:</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-blue-100 p-4 rounded-xl shadow">
-          <p class="text-sm">“Esse curso mudou minha forma de me apresentar profissionalmente. Hoje me sinto mais segura e valorizada.”</p>
-          <p class="mt-2 font-semibold">– Ana C.</p>
-        </div>
-        <div class="bg-blue-100 p-4 rounded-xl shadow">
-          <p class="text-sm">“A didática é incrível e o conteúdo é direto ao ponto. Recomendo demais!”</p>
-          <p class="mt-2 font-semibold">– João M.</p>
-        </div>
-        <div class="bg-blue-100 p-4 rounded-xl shadow">
-          <p class="text-sm">“Com o curso, consegui uma promoção que estava buscando há meses.”</p>
-          <p class="mt-2 font-semibold">– Carla R.</p>
-        </div>
+  <!-- CARROSSEL DE DEPOIMENTOS -->
+  <section class="py-12 px-4 bg-gray-100">
+    <h2 class="text-2xl font-bold text-center mb-6">Depoimentos de Alunos</h2>
+    <div class="max-w-2xl mx-auto">
+      <div id="depoimento" class="text-center italic text-lg transition-opacity duration-500">
+        “Esse curso mudou minha forma de me apresentar profissionalmente. Já colhi resultados incríveis!”
+        <br><span class="block font-bold mt-2">— Mariana L.</span>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="bg-blue-100 py-10">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-6">Perguntas Frequentes</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="font-semibold">📌 O curso é 100% online?</h3>
-          <p class="text-sm">Sim! Você pode fazer no seu ritmo, de onde estiver.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold">📌 Preciso ter experiência prévia?</h3>
-          <p class="text-sm">Não. O curso é ideal para iniciantes e também para quem já tem alguma vivência profissional.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold">📌 Recebo certificado?</h3>
-          <p class="text-sm">Sim, todos os alunos concluintes recebem certificado digital.</p>
-        </div>
-      </div>
+  <section class="py-12 px-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center">Perguntas Frequentes</h2>
+    <div class="space-y-4">
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="cursor-pointer font-semibold">O curso é 100% online?</summary>
+        <p class="mt-2">Sim! Você pode acessar de qualquer lugar, quando quiser.</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="cursor-pointer font-semibold">Recebo certificado?</summary>
+        <p class="mt-2">Sim! Após a conclusão, você recebe um certificado digital.</p>
+      </details>
+      <details class="bg-white p-4 rounded shadow">
+        <summary class="cursor-pointer font-semibold">Preciso ter experiência prévia?</summary>
+        <p class="mt-2">Não! O curso foi feito para iniciantes e profissionais em transição.</p>
+      </details>
     </div>
   </section>
 
+  <!-- SCRIPTS -->
   <script>
-    const form = document.getElementById('leadForm');
-    const statusMsg = document.getElementById('statusMsg');
+    // Carrossel de depoimentos
+    const depoimentos = [
+      {
+        texto: "Esse curso mudou minha forma de me apresentar profissionalmente. Já colhi resultados incríveis!",
+        autor: "Mariana L."
+      },
+      {
+        texto: "Aprendi a me posicionar nas redes sociais e isso me ajudou a conquistar mais clientes.",
+        autor: "Carlos S."
+      },
+      {
+        texto: "A didática é excelente. Simples, prático e direto ao ponto!",
+        autor: "Fernanda R."
+      }
+    ];
+
+    let index = 0;
+    const elemento = document.getElementById('depoimento');
+
+    setInterval(() => {
+      index = (index + 1) % depoimentos.length;
+      elemento.classList.add('opacity-0');
+      setTimeout(() => {
+        elemento.innerHTML = `“${depoimentos[index].texto}”<br><span class="block font-bold mt-2">— ${depoimentos[index].autor}</span>`;
+        elemento.classList.remove('opacity-0');
+      }, 500);
+    }, 6000);
+
+    // Enviar para o Google Sheets
+    const form = document.getElementById('form');
+    const success = document.getElementById('success');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const data = {
+        nome: form.nome.value,
+        email: form.email.value,
+      };
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+      await fetch('URL_DO_SEU_WEBHOOK_DO_GOOGLE_APPS_SCRIPT', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-      try {
-        const response = await fetch('URL_DO_SEU_WEBHOOK_DO_GOOGLE_APPS_SCRIPT', {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-
-        if (response.ok) {
-          statusMsg.classList.remove('hidden');
-          form.reset();
-        }
-      } catch (err) {
-        alert('Erro ao enviar sua inscrição. Tente novamente.');
-      }
+      form.reset();
+      success.classList.remove('hidden');
     });
   </script>
 </body>
 </html>
-
-
